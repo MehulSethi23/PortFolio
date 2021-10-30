@@ -147,8 +147,8 @@ const Tabsbar = ({
           <Tab
             icon="/css_icon.svg"
             filename="contact.css"
-            path="/contact"
-            show="/contact"
+            path="/contactloading"
+            show="/contactloading"
             newpath={cpath}
           />
         )}

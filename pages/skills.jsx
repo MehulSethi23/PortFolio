@@ -272,8 +272,8 @@ const SkillsPage = (props) => {
             </a>
 
             <FadeRight>
-              <Link href="/projects">
-                <button className={styles.outlined}>Projects</button>
+              <Link href="/experienceloading">
+                <button className={styles.outlined}>Experience</button>
               </Link>
             </FadeRight>
           </div>

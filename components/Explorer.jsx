@@ -132,7 +132,7 @@ const Explorer = ({}) => {
               </Link> */}
             </div>
 
-            <Link href="contact">
+            <Link href="contactloading">
               <div className={styles.file}>
                 <Image
                   src="/css_icon.svg"
