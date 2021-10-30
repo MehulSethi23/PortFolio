@@ -1,0 +1,32 @@
+.tab {
+  padding: 0.5rem 1rem;
+  background: var(--tab-bg);
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--tab-border);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.tab p {
+  margin-left: 5px;
+}
+.tab1 {
+  padding-right: 0.3rem;
+  background: var(--tab-bg);
+  color: #ececec;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--tab-border);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.active {
+  border-top: 1px solid var(--accent-color);
+  background: var(--tab-active-bg);
+  border-bottom: none;
+}
