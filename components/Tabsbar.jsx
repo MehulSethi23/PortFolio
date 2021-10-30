@@ -2,12 +2,8 @@ import React from "react";
 import Tab from "./Tab";
 import { useState, useEffect } from "react";
 import styles from "../styles/Tabsbar.module.css";
-import { styled } from "@mui/material/styles";
-import Chip from "@mui/material/Chip";
-import Paper from "@mui/material/Paper";
-import Explorer from "./Explorer";
+
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const dic = {
   1: {
@@ -105,8 +101,8 @@ const Tabsbar = ({
           <Tab
             icon="/html_icon.svg"
             filename="introduction.html"
-            path="/introduction"
-            show="/introduction"
+            path="/introloading"
+            show="/introloading"
             newpath={cpath}
           />
         )}
@@ -114,8 +110,8 @@ const Tabsbar = ({
           <Tab
             icon="/type_script_icon.svg"
             filename="skills.tsx"
-            path="/skills"
-            show="/skills"
+            path="/skillsloading"
+            show="/skillsloading"
             newpath={cpath}
           />
         )}
@@ -123,8 +119,8 @@ const Tabsbar = ({
           <Tab
             icon="/js_icon.svg"
             filename="experience.jsx"
-            path="/experience"
-            show="/experience"
+            show="/experienceloading"
+            path="/experienceloading"
             newpath={cpath}
           />
         )}
@@ -142,8 +138,8 @@ const Tabsbar = ({
           <Tab
             icon="/react_icon.svg"
             filename="projects.jsx"
-            path="/projects"
-            show="/projects"
+            path="/projectsloading"
+            show="/projectsloading"
             newpath={cpath}
           />
         )}

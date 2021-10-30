@@ -4,11 +4,20 @@ import { motion, useAnimation } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { ExperienceCard1 } from "../styles/Styles";
 import { useEffect } from "react";
+import { Router } from "next/router";
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
-
+  useEffect(() => {
+    Router.events.on("routeChangeComplete", () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  }, []);
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -94,6 +103,9 @@ const openDivVariants = {
 };
 
 const IntroductionPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   return (
     <>
       <AnimatePresence>

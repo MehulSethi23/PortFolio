@@ -189,7 +189,7 @@ export const Skills = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 50%;
+  width: 45%;
   margin-left: 23.5%;
 
   &::after {

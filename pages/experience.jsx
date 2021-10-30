@@ -4,6 +4,7 @@ import { ExperienceCard, Page, Main, Right } from "../styles/Styles";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import Fade from "react-reveal/Fade";
 import { getAllRoles } from "../lib/experience";
+import { Router } from "next/router";
 
 const ExperiencePage = (props) => {
   const [visible, setVisible] = useState({
@@ -19,6 +20,15 @@ const ExperiencePage = (props) => {
       setWindowHeight(window.innerHeight);
     }, [window.innerHeight]);
   }
+  useEffect(() => {
+    Router.events.on("routeChangeComplete", () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  }, []);
   return (
     <Page>
       <Right>

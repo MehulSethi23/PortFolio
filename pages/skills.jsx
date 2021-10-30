@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Router } from "next/router";
 
 const line1 = "Skills & Achievements";
 const intro1 =
@@ -26,7 +27,14 @@ function FadeInWhenVisible({ children }) {
       controls.start("visible");
     }
   }, [controls, inView]);
-
+  useEffect(() => {
+    Router.events.on("routeChangeComplete", () => {
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }, []);
   return (
     <motion.div
       ref={ref}
@@ -131,7 +139,6 @@ const SkillsPage = (props) => {
         `try {TagCanvas.Start('myCanvas', '', {textColour: '#ffff',outlineColour: '#0000', imageMode: "both", imagePosition:"top", initial: [0.3,-0.1], fadeIn: 3000, wheelZoom: false, pinchZoom: true, shuffleTags: true, frontSelect: true, textHeight: 18, reverse: true, depth: 0.8,maxSpeed: 0.04, minSpeed: 0.02});} catch(e) {document.getElementById('myCanvasContainer').style.display = 'none';}`
       );
     });
-    console.log(props.skills);
   }
 
   return (

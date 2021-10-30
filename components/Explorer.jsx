@@ -63,7 +63,7 @@ const Explorer = ({}) => {
               className={styles.files}
               style={aboutOpen ? { display: "block" } : { display: "none" }}
             >
-              <Link href="/introduction">
+              <Link href="introloading">
                 <div className={styles.fileIn}>
                   <Image
                     src="/html_icon.svg"
@@ -74,7 +74,7 @@ const Explorer = ({}) => {
                   <p>introduction.html</p>
                 </div>
               </Link>
-              <Link href="/skills">
+              <Link href="skillsloading">
                 <div className={styles.fileIn}>
                   <Image
                     src="/type_script_icon.svg"
@@ -85,7 +85,7 @@ const Explorer = ({}) => {
                   <p>skills.tsx</p>
                 </div>
               </Link>
-              <Link href="experience">
+              <Link href="experienceloading">
                 <div className={styles.fileIn}>
                   <Image
                     src="/js_icon.svg"
@@ -107,7 +107,7 @@ const Explorer = ({}) => {
                   <p>certificates.js</p>
                 </div>
               </Link> */}
-              <Link href="projects">
+              <Link href="projectsloading">
                 <div className={styles.fileIn}>
                   <Image
                     src="/react_icon.svg"

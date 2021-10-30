@@ -8,6 +8,7 @@ import styles from "../styles/IntroductionPage.module.css";
 import { useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 import GithubIcon from "../public/experience/GithubIcon";
+import { Router } from "next/router";
 
 const line1 = "My Projects";
 const line2 = "follow me on ";
@@ -15,7 +16,15 @@ const line2 = "follow me on ";
 function FadeLeft({ children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
-
+  useEffect(() => {
+    Router.events.on("routeChangeComplete", () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  }, []);
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -84,7 +93,9 @@ const letter = {
 const ProjectsPage = () => {
   const ref = useRef();
   const [rotate, setRotate] = useState(0);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   const [show1, setshow1] = useState(true);
   return (
     <AnimatePresence>

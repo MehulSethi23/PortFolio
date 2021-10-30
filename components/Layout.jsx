@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
       setshowExp(true);
     }
   });
-  console.log(url);
 
   return (
     <>

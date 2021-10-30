@@ -74,4 +74,7 @@ skills:
 
   - name: "Framer"
     image: "framer"
+
+  - name: "Material-ui"
+    image: "material-ui"
 ---
