@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Skills, Page, Right, Main } from "../styles/Styles";
 import { getAllSkills } from "../lib/skillset";
 import styles from "../styles/IntroductionPage.module.css";
-import { useScript } from "./useScript";
 
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
