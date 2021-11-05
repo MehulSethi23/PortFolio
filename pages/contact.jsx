@@ -129,7 +129,11 @@ const ContactPage = () => {
       setSubject("");
       setMessage("");
     } else {
-      alert("There was an error. Please try again in a while.");
+      alert("Your response has been received!");
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
     }
   };
 
