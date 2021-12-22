@@ -1,9 +1,19 @@
 ---
 roles:
-  - name: "FrontEnd Intern at PlusKlass"
+  - name: "Web Developer Intern at Spacenos"
+    type: "Internship"
+    image: "spacenos.svg"
+    duration: "Dec 2021 - Present"
+    link: "https://spacenos.com/"
+    description:
+      - "Collaborated with the core team to design and develop the OneEd Portal, the customer side website."
+      - "Pioneered the development of Comment Section and front end designs."
+      - "Worked with other interns to accelerate the development of Project OutRemote, Placement portal for students, colleges and industry, where experts can adopt students in college for advisory."
+
+  - name: "Web Developer Intern at PlusKlass"
     type: "Internship"
     image: "plusklass.svg"
-    duration: "Sept 2021 - PRESENT"
+    duration: "Sept 2021 - Nov 2021"
     link: "https://www.plusklass.com/"
     description:
       - "Collaborated with the core team to design and develop the PlusKlass Portal, the customer side app."

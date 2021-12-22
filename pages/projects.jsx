@@ -165,7 +165,7 @@ const ProjectsPage = () => {
                   stiffness: 300,
                   ease: "easeInOut",
                 }}
-                src={`/experience/netflix.jpg`}
+                src={`/experience/netflixlogonew.jpeg`}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -210,7 +210,7 @@ const ProjectsPage = () => {
                   stiffness: 300,
                   ease: "easeInOut",
                 }}
-                src={`/experience/tesla.png`}
+                src={`/experience/teslafinal.png`}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -222,10 +222,100 @@ const ProjectsPage = () => {
             </a>
           </ExperienceCard2>
         </motion.div>
+        <motion.div
+          style={{
+            marginBottom: "30px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <ExperienceCard2>
+            <a
+              href="https://github.com/MehulSethi23/ChatApp-MERN"
+              target="_blank"
+              rel="noopener"
+            >
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 1.1, ease: "easeInOut", duration: 1 },
+                }}
+                whileTap={{ transition: { opacity: 0, delay: 1 } }}
+                whileHover={{
+                  scale: 1.07,
+
+                  boxShadow: "0px 0px 10px rgb(0, 255, 127)",
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  ease: "easeInOut",
+                }}
+                src={`/experience/WhatsApp-Logonew.png`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+
+                  cursor: "pointer",
+                  transition: "ease-in-out",
+                }}
+              />
+            </a>
+          </ExperienceCard2>
+        </motion.div>
+        <motion.div
+          style={{
+            marginBottom: "30px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <ExperienceCard2>
+            <a
+              href="https://github.com/MehulSethi23/ChatApp-MERN"
+              target="_blank"
+              rel="noopener"
+            >
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 1.1, ease: "easeInOut", duration: 1 },
+                }}
+                whileTap={{ transition: { opacity: 0, delay: 1 } }}
+                whileHover={{
+                  scale: 1.07,
+
+                  boxShadow: "0px 0px 10px rgb(255, 95, 21)",
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  ease: "easeInOut",
+                }}
+                src={`/experience/snapfinal.png`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+
+                  cursor: "pointer",
+                  transition: "ease-in-out",
+                }}
+              />
+            </a>
+          </ExperienceCard2>
+        </motion.div>
       </div>
     </AnimatePresence>
   );
 };
+
+//resize images to height 809 width 1711
 
 export async function getStaticProps() {
   return {
