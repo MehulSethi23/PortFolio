@@ -5,6 +5,11 @@ import styles from "../styles/ContactPage.module.css";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Show({ children }) {
   const controls = useAnimation();
@@ -115,26 +120,63 @@ const ContactPage = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_API_URL);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
-      method: "POST",
-      body: JSON.stringify({ name, email, subject, message }),
-    });
-    if (res.ok) {
-      alert("Your response has been received!");
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    } else {
-      alert("Your response has been received!");
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
     }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <>
+      {/* <Button color="secondary" size="small" onClick={handleClose}>
+        Message Sent
+      </Button> */}
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="primary"
+        onClick={handleClose}
+        sx={{ backgroundColor: "green" }}
+      >
+        <CloseIcon fontSize="small" sx={{ color: "white" }} />
+      </IconButton>
+    </>
+  );
+  const submitForm = (e) => {
+    e.preventDefault();
+    var url =
+      "https://api.whatsapp.com/send?phone=+919971321581&text=" + message;
+    console.log("message");
+    // window.location.href = url;
+    window.open(url, "_blank");
+    handleClick();
+
+    // console.log(process.env.NEXT_PUBLIC_API_URL);
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
+    //   method: "POST",
+    //   body: JSON.stringify({ name, email, subject, message }),
+    // });
+    // if (res.ok) {
+    //   alert("Your response has been received!");
+    //   setName("");
+    //   setEmail("");
+    //   setSubject("");
+    //   setMessage("");
+    // } else {
+    //   alert("Your response has been received!");
+    //   setName("");
+    //   setEmail("");
+    //   setSubject("");
+    //   setMessage("");
+    // }
   };
 
   return (
@@ -149,9 +191,9 @@ const ContactPage = () => {
       </div>
       <div>
         <Show1>
-          <h1>Or Fill Out The Form</h1>
+          <h1>Or Message me on Whatsapp</h1>
           <form className={styles.form} onSubmit={submitForm}>
-            <div className={styles.flex}>
+            {/* <div className={styles.flex}>
               <div>
                 <label htmlFor="name">Name</label>
                 <input
@@ -185,7 +227,7 @@ const ContactPage = () => {
                 onChange={(e) => setSubject(e.target.value)}
                 required
               />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="message">Message</label>
               <textarea
@@ -198,6 +240,13 @@ const ContactPage = () => {
               ></textarea>
             </div>
             <button type="submit">Submit</button>
+            <Snackbar
+              open={open}
+              autoHideDuration={13000}
+              onClose={handleClose}
+              message="Message Sent"
+              action={action}
+            />
           </form>
         </Show1>
       </div>

@@ -12,7 +12,7 @@ import { Router } from "next/router";
 
 const line1 = "Skills & Achievements";
 const intro1 =
-  "Since beginning of my journey as a freelance developer nearly an years ago, I’ve done work for agencies  and collaborated with talented people to create web products for both business and consumer use.";
+  "Since beginning of my journey as a freelance developer nearly an year ago, I’ve done work for agencies  and collaborated with talented people to create web products for both business and consumer use.";
 const intro2 =
   "I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.";
 const intro3 =
