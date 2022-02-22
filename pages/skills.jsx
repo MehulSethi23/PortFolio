@@ -16,7 +16,9 @@ const intro1 =
 const intro2 =
   "I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.";
 const intro3 =
-  "I also have full-stack developer experience with MERN Stack.  My bread and butter for Front-End development is HTML,CSS, JavaScript, React.js, Next.js, Framer-Motion, Bootstrapand for Back-End development I primarily use Node.js, Express, Mangoose and MongoDB.";
+  "I also have full-stack developer experience with MERN Stack.  My bread and butter for Front-End development is React.js, Next.js, TypeScript, HTML, CSS, JavaScript, Framer-Motion, Bootstrap, Material-UI, Ant-Design and for Back-End development I primarily use SQL, Node.js, Express, Mangoose, MongoDB and Firebase.";
+
+const intro4 = "I am also well versed in Python, C and C++.";
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
@@ -228,6 +230,15 @@ const SkillsPage = (props) => {
                   animate="visible"
                 >
                   {intro3}
+                </motion.div>
+              </p>
+              <p className={styles.line}>
+                <motion.div
+                  className={styles.para}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {intro4}
                 </motion.div>
               </p>
               <p className={styles.line}>

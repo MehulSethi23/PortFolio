@@ -8,8 +8,8 @@ const ContactCode = () => {
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;email:{" "}
-        <a href="mailto:swagsy2000@gmail.com" target="_blank" rel="noopener">
-          swagsy2000@gmail.com
+        <a href="mailto:mr.mehulsethi@gmail.com" target="_blank" rel="noopener">
+          mr.mehulsethi@gmail.com
         </a>
         ;
       </p>
@@ -64,7 +64,7 @@ const ContactCode = () => {
           target="_blank"
           rel="noopener"
         >
-          swagsy
+          mehul_23
         </a>
         ;
       </p>
