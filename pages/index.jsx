@@ -49,8 +49,8 @@ function FadeLeft({ children }) {
       initial="hidden"
       transition={{ duration: 0.65, ease: "easeInOut", delay: 3 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
       }}
     >
       {children}
@@ -74,8 +74,8 @@ function FadeRight({ children }) {
       initial="hidden"
       transition={{ duration: 0.65, ease: "easeInOut", delay: 3.5 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
       }}
     >
       {children}
@@ -97,17 +97,28 @@ export default function HomePage() {
               <h1 className={styles.name}>Mehul Sethi</h1>
             </Left>
             <h6 className={styles.bio}>Full Stack Web Developer</h6>
-            <div style={{ display: "flex" }}>
-              <FadeLeft>
+            <div className={styles.name}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 3, ease: "easeInOut", duration: 2 },
+                }}
+                whileTap={{ transition: { opacity: 0, delay: 1 } }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  ease: "easeInOut",
+                }}
+              >
                 <Link href="/projects">
                   <button className={styles.button}>View Work</button>
                 </Link>
-              </FadeLeft>
-              <FadeRight>
+
                 <Link href="/contact">
                   <button className={styles.outlined}>Contact Me</button>
                 </Link>
-              </FadeRight>
+              </motion.div>
             </div>
           </div>
           <Illustration className={styles.illustration} />

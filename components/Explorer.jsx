@@ -71,7 +71,7 @@ const Explorer = ({}) => {
                     height={18}
                     width={18}
                   />
-                  <p>introduction.html</p>
+                  <p>intro.html</p>
                 </div>
               </Link>
               <Link href="skillsloading">

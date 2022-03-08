@@ -99,14 +99,16 @@ const ProjectsPage = () => {
   const [show1, setshow1] = useState(true);
   return (
     <AnimatePresence>
-      <div style={{ display: "flex", flexDirection: "row-reverse" }}>
-        <a
-          href="https://github.com/MehulSethi23"
-          target="_blank"
-          rel="noopener"
-        >
-          <GithubIcon style={{ color: "white" }}></GithubIcon>
-        </a>
+      <div className={styles.contain}>
+        <button className={styles.button1}>
+          <a
+            href="https://github.com/MehulSethi23"
+            target="_blank"
+            rel="noopener"
+          >
+            <GithubIcon style={{ color: "white" }}></GithubIcon>
+          </a>
+        </button>
       </div>
       {/* <div style={{ display: "flex" }}>
         <motion.h3
@@ -133,15 +135,7 @@ const ProjectsPage = () => {
           justifyContent: "center",
         }}
       >
-        <motion.div
-          style={{
-            marginBottom: "30px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <motion.div className={styles.media}>
           <ExperienceCard2>
             <a
               href="https://github.com/MehulSethi23/NetflixCloneApp"
@@ -178,15 +172,7 @@ const ProjectsPage = () => {
           </ExperienceCard2>
         </motion.div>
 
-        <motion.div
-          style={{
-            marginBottom: "30px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <motion.div className={styles.media}>
           <ExperienceCard2>
             <a
               href="https://github.com/MehulSethi23/TeslaClone"
@@ -222,15 +208,7 @@ const ProjectsPage = () => {
             </a>
           </ExperienceCard2>
         </motion.div>
-        <motion.div
-          style={{
-            marginBottom: "30px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <motion.div className={styles.media}>
           <ExperienceCard2>
             <a
               href="https://github.com/MehulSethi23/ChatApp-MERN"
@@ -266,15 +244,7 @@ const ProjectsPage = () => {
             </a>
           </ExperienceCard2>
         </motion.div>
-        <motion.div
-          style={{
-            marginBottom: "30px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <motion.div className={styles.media}>
           <ExperienceCard2>
             <a
               href="https://github.com/MehulSethi23/ChatApp-MERN"

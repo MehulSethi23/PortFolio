@@ -29,13 +29,10 @@
   color: #eee;
   font-size: 3.5rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 .name1 {
-  color: var(--accent-color);
-  font-size: 3.5rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  display: flex;
 }
 
 .bio {
@@ -160,11 +157,16 @@
     margin: 0.75rem auto 3rem;
   }
   .illustration {
-    position: absolute;
+    /* position: absolute;
     bottom: -50px;
     right: 0;
     height: 700px;
-    width: 600px;
+    width: 600px; */
+    right: 0;
+    position: absolute;
+    height: 550px;
+    width: 420px;
+    bottom: -50px;
   }
 }
 

@@ -113,7 +113,6 @@ const IntroductionPage = () => {
           <FadeInWhenVisible>
             <motion.div className={styles.info}>
               <motion.p
-                className={styles.line}
                 className={styles.className}
                 variants={openVariants}
                 initial="hidden"
@@ -264,9 +263,19 @@ const IntroductionPage = () => {
                   initial="hidden1"
                   animate="visible1"
                 >
+                  <p className={styles.para}>&nbsp;&nbsp;&nbsp;CGPA : 9.75 .</p>
+                </motion.p>
+              </FadeInWhenVisibleRight>
+              <FadeInWhenVisibleRight>
+                <motion.p
+                  className={styles.para}
+                  variants={openDivVariants}
+                  initial="hidden1"
+                  animate="visible1"
+                >
                   <p className={styles.para}>
-                    &nbsp;&nbsp;&nbsp;Address : K-9/28, DLF Phase-2, Gurugram,
-                    Harayana -122001, India.
+                    &nbsp;&nbsp;&nbsp;Address : Gurugram, Harayana - 122002,
+                    India.
                   </p>
                 </motion.p>
               </FadeInWhenVisibleRight>

@@ -54,7 +54,8 @@
   font-size: 0.875rem;
 }
 .fileIn {
-  padding: 0.2rem 2rem;
+  padding: 0.2rem 0;
+  padding-left: 2rem;
   display: flex;
   align-items: center;
   font-size: 0.875rem;
@@ -90,7 +91,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
   .explorer {
     display: none;
   }
