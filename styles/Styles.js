@@ -129,15 +129,15 @@ export const ExperienceCard = styled.article`
     justify-content: flex-start;
 
     img {
-      height: 4vh;
+      height: 3.2vh;
     }
   }
 
   h2 {
     margin: 0 0 0 0.5rem;
-    line-height: 2.8vh;
+    line-height: 2.1vh;
     font-weight: 500;
-    font-size: 2.7vh;
+    font-size: 2.1vh;
   }
 
   ul {
