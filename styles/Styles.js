@@ -114,30 +114,30 @@ export const ExperienceCard = styled.article`
 
   header {
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    font-size: 10pt;
+    margin-bottom: 1%;
+    font-size: 1.8vh;
   }
   .date {
     color: ${({ theme }) => theme.fontSecondary};
     text-transform: initial;
   }
   div {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
 
     img {
-      height: 28pt;
+      height: 4vh;
     }
   }
 
   h2 {
     margin: 0 0 0 0.5rem;
-    line-height: 28pt;
+    line-height: 2.8vh;
     font-weight: 500;
-    font-size: 18pt;
+    font-size: 2.7vh;
   }
 
   ul {
@@ -161,7 +161,7 @@ export const ExperienceCard = styled.article`
     right: 0;
     top: 0;
     line-height: 18px;
-    margin: 2rem 2rem 0 0;
+    margin: 2% 2.5% 0 0;
     svg {
       stroke: ${({ theme }) => theme.fontSecondary};
     }
@@ -274,6 +274,38 @@ export const Main1 = styled.main`
 `;
 
 export const Page = styled.div`
+  color: ${({ theme }) => theme.fontPrimary};
+
+  a {
+    color: ${({ theme }) => theme.fontPrimary};
+    text-decoration: underline;
+  }
+
+  footer {
+    font-size: 14pt;
+    color: ${({ theme }) => theme.fontSecondary};
+    margin-bottom: 1rem;
+    text-align: center;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+    .heart {
+      color: ${({ theme }) => theme.fontPrimary};
+      margin-bottom: -0.15rem;
+    }
+
+    a {
+      font-weight: normal;
+    }
+
+    span {
+      font-size: 11pt;
+    }
+  }
+`;
+
+export const ExpPage = styled.div`
   color: ${({ theme }) => theme.fontPrimary};
 
   a {
