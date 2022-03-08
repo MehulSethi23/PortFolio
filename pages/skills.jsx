@@ -25,9 +25,7 @@ function FadeInWhenVisible({ children }) {
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    controls.start("visible");
   }, [controls, inView]);
   useEffect(() => {
     Router.events.on("routeChangeComplete", () => {
