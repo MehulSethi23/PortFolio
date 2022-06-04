@@ -38,11 +38,11 @@ const ContactCode = () => {
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;instagram:{" "}
         <a
-          href="https://www.instagram.com/_swagsy/"
+          href="https://www.instagram.com/_mehul23/"
           target="_blank"
           rel="noopener"
         >
-          _swagsy
+          _mehul23
         </a>
         ;
       </p>
